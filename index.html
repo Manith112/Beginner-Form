@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./intro-component-with-signup-form-master/images/favicon-32x32.png">
+    <link rel="stylesheet" href="index.css">
+    <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+<body>
+    <main class="container">
+        <!-- left part  -->
+    <section class="first">
+        <h1 class="learn">Learn to code by watching others</h1>
+        <p> See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+            but understanding how developers think is invaluable. </p>
+    </section>
+
+    <!-- right part  -->
+    <section class="second">
+        <div class="above">
+            <p>Try it free 7 days <span>then $20/mo. thereafter</span></p>
+        </div>
+
+        <div class="below">
+            <div class="input-bg">
+                <input type="text" placeholder="First Name" class="text-input" id="first-input" oninput="validateFirstName()">
+                <p id="first" ></p>
+                <p id="first-invalid" class="error"></p>
+            </div>
+            <div class="input-bg">
+                <input type="text" placeholder="Last Name" class="text-input" id="last-input" oninput="validateLastName()">
+                <p id="last"></p>
+                <p id="last-invalid" class="error"></p>
+            </div>
+            <div class="input-bg">
+                <input type="email" placeholder=" Email Address" class="text-input" id="email-input" oninput="emailInvalid()">
+                <p id="email"></p>
+                <p id="email-invalid" class="error"></p>
+            </div>
+            <div class="input-bg">
+                <input type="password" placeholder="Password" class="text-input" id="password-input" oninput="passwordWrong()">
+                <p id="password"></p>
+                <p id="password-invalid" class="error"></p>
+            </div>
+            <div>
+                <button id="btn" onclick="fillEmpty()">Claim Your Free Trial</button>
+            </div>
+            <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+        </div>
+    </section>
+</main>
+<script src="index.js"></script>
+</body>
+</html>

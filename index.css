@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --Red: hsl(0, 100%, 74%); 
+    --Green: hsl(154, 59%, 51%);
+--Blue: hsl(248, 32%, 49%);
+--Dark-Blue: hsl(249, 10%, 26%); 
+--Grayish-Blue: hsl(246, 25%, 77%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    background-image: url("./intro-component-with-signup-form-master/images/bg-intro-desktop.png"), linear-gradient(var(--Red), var(--Red));
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position:  center top, 0px 0px;
+}
+.container{
+    display: flex;
+    gap: 30px;
+}
+ /* left part  */
+.first{
+   
+    margin: auto;
+    width: 500px;
+    color: white ;
+}
+.first h1{
+    font-size: 40px;
+    line-height: 45px;
+}
+.first p{
+    padding-top: 30px;
+}
+
+/* right part  */
+.second{
+    width: 500px;
+}
+.second .above{
+    padding: 10px;
+    background-color: var(--Blue);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 23px 20px 4px rgba(0,0,0,0.1);
+}
+.above > p{
+    color: white;
+    font-weight: 400;
+}
+.above > p > span{
+    color: var(--Grayish-Blue);
+    font-weight: 500;
+}
+
+.second .below{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 23px 20px 4px rgba(0,0,0,0.1);
+}
+
+.second > .below > div{
+    padding: 10px;
+}
+.below > div > input{
+    padding: 10px 20px;
+    width: 100%;
+    border: 1px solid var(--Grayish-Blue);
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--Dark-Blue);
+}
+.text-input::placeholder{
+    color: var(--Grayish-Blue);
+}
+ .text-input:hover{
+    border-color: var(--Blue);
+}
+.below > div > button{
+    padding: 10px 20px;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: var(--Green);
+   color: white;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+}
+.below > div > button:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.below > p{
+    padding: 10px;
+    text-align: center;
+    color: var(--Grayish-Blue);
+    font-size: 12px;
+    font-weight: 600;
+}
+.below > p > span{
+    color: var(--Red);
+}
+/* active  */
+.input-bg.error , .input-bg > .error{
+    text-align: right;
+    font-size: 12px;
+    color: var(--Red);
+}
+.input-bg.error input{
+    background-image: url("./intro-component-with-signup-form-master/images/icon-error.svg");
+    background-repeat: no-repeat;
+    background-position: 95%  ;
+}
+/* animation  */
+.first > .learn{
+    
+    animation: fadeInLeft 3s forwards;
+}
+.second{
+    animation: fadeInRight 3s forwards;
+    overflow: hidden;
+}
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+@media screen and (max-width: 1070px){
+        .first , .second{
+            width: 400px;
+        }
+        .container{
+            margin: 0 20px;
+        }
+}   
+@media screen and (max-width: 850px){
+    .first , .second{
+        width: 350px;
+    }
+}
+@media screen and (max-width: 750px){
+    .container{
+        flex-direction: column;
+        margin: 40px 20px;
+    }
+    .first {
+        text-align: center;
+    }
+    .first , .second{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    body{
+        background-image: url("./intro-component-with-signup-form-master/images/bg-intro-mobile.png"), linear-gradient(var(--Red), var(--Red));
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position:  center top, 0px 0px;
+    }
+    .first , .second{
+        width: auto;
+    }
+}
