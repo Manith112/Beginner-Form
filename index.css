@@ -130,17 +130,16 @@ body{
     animation: fadeInLeft 3s forwards;
 }
 .second{
-    animation: fadeInRight 3s forwards;
-    overflow: hidden;
+    animation: popUp 3s ease forwards;
 }
-@keyframes fadeInRight {
+@keyframes popUp {
     from {
       opacity: 0;
-      transform: translateX(50%);
+    
     }
     to {
       opacity: 1;
-      transform: translateX(0);
+   
     }
   }
 @keyframes fadeInLeft {
